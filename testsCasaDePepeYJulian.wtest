@@ -15,23 +15,26 @@ describe "Tests casa de Pepe y Julian" {
     }
 
     test "La cantidad de cosas compradas son 3 " {
-/*         casaDePepeYJulian.comprar(heladera)
+/*      casaDePepeYJulian.cuentaAsignada().saldo(29200)
+        casaDePepeYJulian.comprar(heladera)
         casaDePepeYJulian.comprar(cama)
         casaDePepeYJulian.comprar(plancha)  */   
         assert.equals(3, casaDePepeYJulian.cantidadDeCosasCompradas())
     }
 
     test "Entre las cosas compradas tiene algún electrodoméstico y algun mueble pero no comida" {
-/*         casaDePepeYJulian.comprar(heladera)
+/*      casaDePepeYJulian.cuentaAsignada().saldo(29200)
+        casaDePepeYJulian.comprar(heladera)
         casaDePepeYJulian.comprar(cama)
-        casaDePepeYJulian.comprar(plancha)   */  
+        casaDePepeYJulian.comprar(plancha)  */  
         assert.that(casaDePepeYJulian.tieneAlgun(electrodomestico))
         assert.that(casaDePepeYJulian.tieneAlgun(mueble))
         assert.notThat(casaDePepeYJulian.tieneAlgun(comida))
     }
 
     test "Si le preguntan si viene de comprar un electrodoméstico dice que sí, y si viene de comprar un mueble dice que no" {
-/*         casaDePepeYJulian.comprar(heladera)
+/*      casaDePepeYJulian.cuentaAsignada().saldo(29200)
+        casaDePepeYJulian.comprar(heladera)
         casaDePepeYJulian.comprar(cama)
         casaDePepeYJulian.comprar(plancha)  */       
         assert.that(casaDePepeYJulian.vieneDeComprar(electrodomestico))
@@ -39,37 +42,41 @@ describe "Tests casa de Pepe y Julian" {
     }
         
     test "Es derrochona (ya que gastó 29200)" {
-/*         casaDePepeYJulian.comprar(heladera)
+/*      casaDePepeYJulian.cuentaAsignada().saldo(29200)
+        casaDePepeYJulian.comprar(heladera)
         casaDePepeYJulian.comprar(cama)
         casaDePepeYJulian.comprar(plancha)  */       
         assert.that(casaDePepeYJulian.esDerrochona())
     }
 
     test "Los electrodomesticos que compraron son la heladera y la plancha" {
-/*         casaDePepeYJulian.comprar(heladera)
+/*      casaDePepeYJulian.cuentaAsignada().saldo(29200)
+        casaDePepeYJulian.comprar(heladera)
         casaDePepeYJulian.comprar(cama)
-        casaDePepeYJulian.comprar(plancha)   */      
+        casaDePepeYJulian.comprar(plancha)  */       
         assert.equals([heladera, plancha], casaDePepeYJulian.comprados(electrodomestico))
     }
-
     test "Los muebles comprados son la cama y nada más"{
-/*         casaDePepeYJulian.comprar(heladera)
+/*      casaDePepeYJulian.cuentaAsignada().saldo(29200)
+        casaDePepeYJulian.comprar(heladera)
         casaDePepeYJulian.comprar(cama)
-        casaDePepeYJulian.comprar(plancha)  */
+        casaDePepeYJulian.comprar(plancha)  */  
         assert.equals([cama], casaDePepeYJulian.comprados(mueble))
     }
 
     test "No hay comida comprada"{
-/*         casaDePepeYJulian.comprar(heladera)
+/*      casaDePepeYJulian.cuentaAsignada().saldo(29200)
+        casaDePepeYJulian.comprar(heladera)
         casaDePepeYJulian.comprar(cama)
-        casaDePepeYJulian.comprar(plancha)   */       
+        casaDePepeYJulian.comprar(plancha)  */       
         assert.equals([], casaDePepeYJulian.comprados(comida))
     }
     
     test " No es una mala época"{
-/*         casaDePepeYJulian.comprar(heladera)
+/*      casaDePepeYJulian.cuentaAsignada().saldo(29200)
+        casaDePepeYJulian.comprar(heladera)
         casaDePepeYJulian.comprar(cama)
-        casaDePepeYJulian.comprar(plancha)  */
+        casaDePepeYJulian.comprar(plancha)  */  
         assert.notThat(casaDePepeYJulian.malaEpoca())
     }
 
@@ -78,16 +85,18 @@ describe "Tests casa de Pepe y Julian" {
     }
 
     test "Falta comida"{
-/*         casaDePepeYJulian.comprar(heladera)
+/*      casaDePepeYJulian.cuentaAsignada().saldo(29200)
+        casaDePepeYJulian.comprar(heladera)
         casaDePepeYJulian.comprar(cama)
-        casaDePepeYJulian.comprar(plancha)  */
+        casaDePepeYJulian.comprar(plancha)  */  
         assert.that(casaDePepeYJulian.faltaComida())
     }
 
     test "Las categorías compradas son electrodoméstico y mueble"{
-/*      casaDePepeYJulian.comprar(heladera)
+/*      casaDePepeYJulian.cuentaAsignada().saldo(29200)
+        casaDePepeYJulian.comprar(heladera)
         casaDePepeYJulian.comprar(cama)
-        casaDePepeYJulian.comprar(plancha) */
+        casaDePepeYJulian.comprar(plancha)  */  
         assert.equals([electrodomestico, mueble], casaDePepeYJulian.categoriasCompradas())
     }
 }

@@ -27,7 +27,7 @@ object casaDePepeYJulian {
     }
 
     method esDerrochona() {
-        return cosas.sum({cosa => cosa.precio() >= 9000}) //.sum para sumar todo
+        return cosas.sum({cosa => cosa.precio()}) >= 9000 //.sum para sumar todo
     }
 
     method compraMasCara() {
@@ -47,11 +47,12 @@ object casaDePepeYJulian {
     }
 
     method faltaComida() {
-        return cosas.count({cosa => cosa.categoria() == comida} < 2) // .count para contar los elemt que cumplen
+        return cosas.count({cosa => cosa.categoria().esUnAlimento()}) < 2 // .count para contar los elemt que cumplen
     }
 
     method  categoriasCompradas() {
-        return cosas.map({cosa =>  cosa.categoria()}).asSet()  //.asSet para eliminar duplicados 
+        return (cosas.map({cosa =>  cosa.categoria()}).asSet()).asList()
+// Uso .asSet para eliminar duplicados del set. Con .asList() transformo el set en una lista para que no rompa test
     }
 }
 
