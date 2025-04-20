@@ -3,8 +3,10 @@ import cosas.*
 object casaDePepeYJulian {
 
     const property cosas = [] // Es const porque lo que va a ir cambiando es lo que esta dentro de la lista. 
+    var property cuentaAsignada = cuentaCorriente
 
     method comprar(cosa) {
+        cuentaAsignada.extraer(cosa.precio())
         cosas.add(cosa)        //.add para ir agregando "cosa" a la lista
     }
 
