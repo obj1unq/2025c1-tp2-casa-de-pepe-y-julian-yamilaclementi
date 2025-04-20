@@ -1,11 +1,19 @@
 object electrodomestico{
+	method esUnAlimento() {
+		return false
+	}
 }
 
 object mueble {
+	method esUnAlimento() {
+		return false
+	}
 }
 
 object comida {
-
+	method esUnAlimento() {
+		return true
+	}
 }
 
 object heladera {
